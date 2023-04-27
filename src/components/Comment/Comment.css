@@ -1,0 +1,103 @@
+.Container4{
+    max-width: 343px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.Container4 .Container4__title{
+    width: 343px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0 0;
+}
+
+.Container4 .Container4__title img{
+    width: 174px;
+    height: 40px;
+}
+
+.Container4 .Container4__title span{
+    font-size: 14px;
+    color: #49839D;
+    margin-bottom: 10px;
+}
+
+.Container4 hr{
+    width: 100%;
+    border-color: #B7B7B7;
+    border-style: solid;
+}
+
+.Container4 .Container4__content{
+    width: 343px;
+    display: flex;
+    /* align-items: flex-start; */
+    padding: 8px 0;
+}
+
+.Container4 .Container4__content img{
+    width: 48px;
+    height: 48px;
+    margin-right: 5px;
+    margin-left: 15px;
+}
+
+.Container4 .Container4__content span{
+    background-image: url(/public/img/chatbox.png);
+    background-size: cover;
+    width: 260px;
+    height: auto;
+    font-size: 10px;
+    font-family: SF Pro Text;
+    color: #777777;
+    line-height: 12px;
+    padding: 8px 10px 8px 14px;
+}
+
+.Container4 .Container4__button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.Container4 .Container4__button p{
+    width: 311px;
+    height: 60px;
+    background-image: url(/public/img/First-content-arrow.png);
+    background-size: cover;
+    color: white;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.Container4 .Container4__button button{
+    width: 294px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50px;
+    border-width: thin;
+    border-style: solid;
+    border-color: #B7B7B7;
+    font-size: 14px;
+    font-family: SF Pro Text;
+    color: #777777;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.Container4 .Container4__button button:hover{
+    background-color: #C4C4C4;
+    color: white;
+}
+
+
