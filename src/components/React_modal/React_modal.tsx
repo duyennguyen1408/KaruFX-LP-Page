@@ -18,18 +18,18 @@ const customStyles = {
 Modal.setAppElement("#root");
 
 function React_modal({ isOpen, children }) {
-    const [modalIsOpen, setIsOpen] = React.useState(false);
+    const [modalIsOpen, setIsOpen] = React.useState<any>(false);
 
-    function openModal() {
+    function openModal(value:boolean) :void {
         setIsOpen(true);
     }
 
-    function afterOpenModal() {
+    function afterOpenModal(value:boolean) :void {
         // references are now sync'd and can be accessed.
         // subtitle.style.color = "#f00";
     }
 
-    function closeModal() {
+    function closeModal(value:boolean) :void {
         setIsOpen(false);
     }
 

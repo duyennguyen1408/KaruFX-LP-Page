@@ -4,14 +4,14 @@ import "./Second-content.css";
 import Star_rating from "../Star_Rating/Star_rating";
 
 function Second_content() {
-    const [loading, setLoading] = useState(false);
-    const [posts, setPosts] = useState([]);
+    const [loading, setLoading] = useState<any>(false);
+    const [posts, setPosts] = useState<any>([]);
 
     useEffect(() => {
         const loadPost = async () => {
             setLoading(true);
 
-            const response = await axios.get("./data/Content.json");
+            const response:any = await axios.get("./data/Content.json");
             console.log(response);
             setPosts(response.data);
             setLoading(false);
@@ -69,7 +69,7 @@ function Second_content() {
     );
 }
 
-const Header = ({ img }) => {
+const Header: React.FC<{img:string}> = ({ img }) => {
     return (
         <div>
             <div className="Container2__content__heading">
@@ -80,7 +80,7 @@ const Header = ({ img }) => {
     );
 };
 
-const Left_content = ({ rate, img }) => {
+const Left_content: React.FC<{rate:number, img:string}> = ({ rate, img }) => {
     return (
         <div>
             <div className="Container2__content__text--left">
@@ -91,7 +91,13 @@ const Left_content = ({ rate, img }) => {
     );
 };
 
-const Right_content = ({ img, text, img1 }) => (
+interface Props{
+    img:string;
+    text:string;
+    img1: string
+}
+
+const Right_content: React.FC<Props> = ({ img, text, img1 }) => (
     <div>
         <div className="Container2__content__text--right">
             <div className="Container2__content__text--right1">
@@ -106,7 +112,7 @@ const Right_content = ({ img, text, img1 }) => (
     </div>
 );
 
-const Arrow = ({ text }) => (
+const Arrow: React.FC<{text:string}> = ({ text }) => (
     <div>
         <div className="Container2__content__arrow">
             <p>{text}</p>
@@ -115,12 +121,12 @@ const Arrow = ({ text }) => (
     </div>
 );
 
-const List = ({ img, content }) => (
+const List: React.FC<{img:string, content: string[]}> = ({ img, content }) => (
     <div>
         {content?.map((text) => {
             return (
                 <div>
-                    <ul className="Container2__content__list" type="none">
+                    <ul className="Container2__content__list" >
                         <li>
                             <img src={img} />
                             <span //use HTML in array
@@ -134,7 +140,7 @@ const List = ({ img, content }) => (
     </div>
 );
 
-const Message = ({ img, text }) => (
+const Message: React.FC<{img:string, text:string}> = ({ img, text }) => (
     <div>
         <div className="Container2__content__message">
             <img src={img} />
@@ -143,7 +149,7 @@ const Message = ({ img, text }) => (
     </div>
 );
 
-const Last_content = ({ text, img }) => (
+const Last_content: React.FC<{ img: string}> = ({ img }) => (
     <div>
         <div className="Container2__content__last">
             <p>キャンペーン情報</p>
