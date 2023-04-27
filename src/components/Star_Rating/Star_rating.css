@@ -1,0 +1,15 @@
+.Rate{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 146px;
+    height: 32px;
+    margin: 0px auto 10px;
+}
+
+.Rate span{
+    font-size: 24px;
+    font-family: Solomon Sans Bold;
+    color: orange;
+    font-weight: 600;
+}

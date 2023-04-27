@@ -1,0 +1,51 @@
+[
+    {   
+        "id":1,
+        "title": "./img/Second-content-h1.png",
+        "content" : [
+        "初心者にもわかりやすい<span class='change-color' >取引ツール</span>",
+        "<span class='change-color'>約4,000円から</span>気軽に取引OK",
+        "取引情報・分析機能 <span class='change-color'  >が充実！</span>"
+        ],
+        "text" : "初心者の方<span class='change-color'>でも</span>安心！",
+        "ad": "./img/Second-content-ad.png",
+        "img": "./img/First-content-title2.png",
+        "img1":"./img/content-mark.png",
+        "img2":"./img/Second-content-ad3.png",
+        "graph": "./img/Second-content-ad2.png",
+        "star_rating": 4.8,
+        "commentID" : 1
+    },
+    {   
+        "id":2,
+        "title": "./img/Second-content-h2.png",
+        "content" : [
+            
+            "スマホもPCも使える<span class='change-color' >取引ツール</span>",
+            "業界初！<span class='change-color'>社会貢献ポイント制度</span>",
+            "上場企業で<span class='change-color'>安心のお取引を提供</span>"
+            
+        ],
+        "text": "選ぶだけ <span class='change-color'>の</span> かんたん自動売買！",
+        "ad": "./img/Second-content-ad4.png",
+        "img": "./img/First-content-title3.png",
+        "graph": "./img/Second-content-ad5.png",
+        "star_rating": 4.7,
+        "commentID" : 2
+    },
+    {   
+        "id":3,
+        "title": "./img/Second-content-h3.png",
+        "content" : [
+            "<span class='change-color'>充実の</span>無料オンラインセミナー",
+            "<span class='change-color'>スリッページなしで</span>約定率100%",
+            "<span class='change-color'>数々のマーケット情報！</span>"
+        ],
+        "text" : "約定率100%<span class='change-color'>の</span>安心感! ",
+        "ad": "./img/Second-content-ad6.png",
+        "img": "./img/First-content-title4.png",
+        "graph": "./img/Second-content-ad7.png",
+        "star_rating":4.5,
+        "commentID" : 3
+    }
+]

@@ -7,13 +7,43 @@
 body{
     display: flex;
     justify-content: center;
-    
 }
 
 .App{
     background-color: #F5F5F5;
-    width: 375px;
+    max-width: 100%;
+    width: 377px;
     height: auto;
+    border: 1px solid #C4C4C4;
 }
+
+.swiper-button-next::after, .swiper-button-prev::after {
+    color: #FF8C50!important; 
+    font-size: 20px !important;
+    width: 5px;
+    height: 19px;
+}
+
+.swiper-button-next {
+    padding-left: 30px !important;
+}
+
+.swiper-button-prev{
+    padding-right: 30px !important;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #FF8C50;
+}
+    
+
+
+
+
+
+
+
+
+
 
 
