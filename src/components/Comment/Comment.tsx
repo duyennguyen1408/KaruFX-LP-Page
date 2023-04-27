@@ -4,15 +4,21 @@ import Modal from "react-modal";
 import "./Comment.css";
 import axios from "axios";
 
-function Comment({ handleClick, id }) {
-    const [loading, setLoading] = useState(false);
-    const [posts, setPosts] = useState([]);
+interface Props {
+    handleClick(value: boolean): void;
+    id: number;
+}
+
+const Comment: React.FC<Props> = ({ handleClick, id }) => {
+    
+    const [loading, setLoading] = useState<any>(false);
+    const [posts, setPosts] = useState<any>([]);
 
     useEffect(() => {
         const loadPost = async () => {
             setLoading(true); // Till the data is fetch using API the Loading page will show.
 
-            const response = await axios.get("./data/Comment.json"); // Await make wait until that promise (axios.get(url)) settles and return data
+            const response:any = await axios.get("./data/Comment.json"); // Await make wait until that promise (axios.get(url)) settles and return data
             console.log(response);
             setPosts(response.data); // After fetching, data stored it in posts state.
             setLoading(false); // Close Loading page
@@ -20,7 +26,8 @@ function Comment({ handleClick, id }) {
         loadPost(); // call Function
     }, []);
 
-    const found = posts.find((obj) => {
+
+    const found = posts.find((obj)  => {
         return obj.id === id;
     });
     return (
@@ -42,7 +49,11 @@ function Comment({ handleClick, id }) {
     );
 }
 
-const Title = ({ img }) => {
+const handleClick = (id: string) => {
+    console.log(id);
+}
+
+const Title: React.FC<{ img: string}> = ({ img }) => {
     return (
         <div>
             <div className="Container4__title">
@@ -54,9 +65,9 @@ const Title = ({ img }) => {
     );
 };
 
-const Content = ({ content }) => (
+const Content: React.FC<{content: string[]}> = ({ content}) => (
     <div>
-        {content.map((text) => {
+        {content.map((text:string) => {
             return (
                 <div>
                     <div className="Container4__content">
@@ -70,7 +81,7 @@ const Content = ({ content }) => (
     </div>
 );
 
-const Close = ({ handleClick }) => (
+const Close: React.FC<{handleClick():void}> = ({ handleClick }) => (
     <div>
         <div className="Container4__button">
             <p>公式サイトを見る</p>

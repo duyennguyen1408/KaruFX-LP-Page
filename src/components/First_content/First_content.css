@@ -60,6 +60,8 @@
     margin-left: 10px;
     color: #49839D;
     padding-bottom: 25px;
+    list-style-type: none; 
+    /* no type for list */
 }
 
 .Container .Container__content1 .Container__content1__paragraph .Container__content1__paragraph-2 li{

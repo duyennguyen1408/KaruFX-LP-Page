@@ -14,14 +14,14 @@ import Comment from "../Comment/Comment";
 
 Modal.setAppElement("#root");
 function First_content() {
-    const [loading, setLoading] = useState(false);
-    const [posts, setPosts] = useState([]);
+    const [loading, setLoading] = useState<any>(false);
+    const [posts, setPosts] = useState<any>([]);
 
     useEffect(() => {
         const loadPost = async () => {
             setLoading(true);
 
-            const response = await axios.get("./data/Content.json");
+            const response:any = await axios.get("./data/Content.json");
             console.log(response);
             setPosts(response.data);
             setLoading(false);
@@ -71,13 +71,20 @@ function First_content() {
     );
 }
 
-const Title = ({ img }) => (
+const Title: React.FC<{img:string}> = ({ img }) => (
     <div>
         <img className="Container__title" src={img} />
     </div>
 );
 
-const Content_1 = ({ img, img1, text, content }) => (
+interface Props{
+    img:string;
+    img1:string;
+    text:string;
+    content: string[]
+}
+
+const Content_1: React.FC<Props> = ({ img, img1, text, content }) => (
     <div>
         <div className="Container__content1">
             <img className="Container__content1__img-left" src={img}></img>
@@ -88,12 +95,11 @@ const Content_1 = ({ img, img1, text, content }) => (
                     <span dangerouslySetInnerHTML={{ __html: text }}></span>
                 </div>
 
-                {content.map((text1) => {
+                {content.map((text1:string) => {
                     return (
                         <div>
                             <ul
                                 className="Container__content1__paragraph-2"
-                                type="none"
                             >
                                 <li>
                                     <img src="./img/First-content-mark.png" />
@@ -112,9 +118,9 @@ const Content_1 = ({ img, img1, text, content }) => (
     </div>
 );
 
-const Content_2 = ({ img, id }) => {
+const Content_2: React.FC <{img:string, id:number}> = ({ img, id }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const handleClick = (value) => {
+    const handleClick = (value:boolean) : void => {
         setIsOpen(value);
     };
     return (
