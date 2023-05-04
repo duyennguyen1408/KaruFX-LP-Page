@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import ReactDOM from "react-dom";
 import Modal from "react-modal";
-import "./First_content.css";
+import "./Content_summary.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, A11y } from "swiper";
 import "swiper/css";
@@ -13,7 +13,7 @@ import React_modal from "../React_modal/React_modal";
 import Comment from "../Comment/Comment";
 
 Modal.setAppElement("#root");
-function First_content() {
+function Content_summary() {
     const [loading, setLoading] = useState<any>(false);
     const [posts, setPosts] = useState<any>([]);
 
@@ -21,7 +21,7 @@ function First_content() {
         const loadPost = async () => {
             setLoading(true);
 
-            const response:any = await axios.get("./data/Content.json");
+            const response = await axios.get("./data/Content.json");
             console.log(response);
             setPosts(response.data);
             setLoading(false);
@@ -63,6 +63,7 @@ function First_content() {
                                         />
                                     </div>
                                 </SwiperSlide>
+                                
                             ))}
                     </div>
                 )}
@@ -141,4 +142,4 @@ const Content_2: React.FC <{img:string, id:number}> = ({ img, id }) => {
     );
 };
 
-export default First_content;
+export default Content_summary;

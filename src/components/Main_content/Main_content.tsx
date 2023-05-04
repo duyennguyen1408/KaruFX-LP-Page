@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import "./Second-content.css";
+import "./Main_content.scss";
 import Star_rating from "../Star_Rating/Star_rating";
 
-function Second_content() {
+function Main_content() {
     const [loading, setLoading] = useState<any>(false);
     const [posts, setPosts] = useState<any>([]);
 
@@ -11,7 +11,7 @@ function Second_content() {
         const loadPost = async () => {
             setLoading(true);
 
-            const response:any = await axios.get("./data/Content.json");
+            const response = await axios.get("./data/Content.json");
             console.log(response);
             setPosts(response.data);
             setLoading(false);
@@ -158,4 +158,4 @@ const Last_content: React.FC<{ img: string}> = ({ img }) => (
     </div>
 );
 
-export default Second_content;
+export default Main_content;

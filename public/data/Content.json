@@ -1,6 +1,6 @@
 [
     {   
-        "id":1,
+        "id": 1,
         "title": "./img/Second-content-h1.png",
         "content" : [
         "初心者にもわかりやすい<span class='change-color' >取引ツール</span>",
@@ -17,7 +17,7 @@
         "commentID" : 1
     },
     {   
-        "id":2,
+        "id": 2,
         "title": "./img/Second-content-h2.png",
         "content" : [
             
@@ -34,7 +34,7 @@
         "commentID" : 2
     },
     {   
-        "id":3,
+        "id": 3,
         "title": "./img/Second-content-h3.png",
         "content" : [
             "<span class='change-color'>充実の</span>無料オンラインセミナー",

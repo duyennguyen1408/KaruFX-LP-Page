@@ -5,11 +5,12 @@
     max-width: 146px;
     height: 32px;
     margin: 0px auto 10px;
+    span{
+        font-size: 24px;
+        font-family: Solomon Sans Bold;
+        color: orange;
+        font-weight: 600;
+    }
 }
 
-.Rate span{
-    font-size: 24px;
-    font-family: Solomon Sans Bold;
-    color: orange;
-    font-weight: 600;
-}
+

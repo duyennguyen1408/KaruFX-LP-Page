@@ -1,6 +1,6 @@
 import React from "react";
 import { Rating } from "react-simple-star-rating";
-import "./Star_rating.css";
+import "./Star_rating.scss";
 
 interface Props{
     rating:number;

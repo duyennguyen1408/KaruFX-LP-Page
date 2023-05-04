@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import Modal from "react-modal";
-import "./Comment.css";
+import "./Comment.scss";
 import axios from "axios";
 
 interface Props {
@@ -18,7 +18,7 @@ const Comment: React.FC<Props> = ({ handleClick, id }) => {
         const loadPost = async () => {
             setLoading(true); // Till the data is fetch using API the Loading page will show.
 
-            const response:any = await axios.get("./data/Comment.json"); // Await make wait until that promise (axios.get(url)) settles and return data
+            const response = await axios.get("./data/Comment.json"); // Await make wait until that promise (axios.get(url)) settles and return data
             console.log(response);
             setPosts(response.data); // After fetching, data stored it in posts state.
             setLoading(false); // Close Loading page

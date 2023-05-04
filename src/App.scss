@@ -17,6 +17,7 @@ body{
     border: 1px solid #C4C4C4;
 }
 
+//Edit Swiper using !important
 .swiper-button-next::after, .swiper-button-prev::after {
     color: #FF8C50!important; 
     font-size: 20px !important;
@@ -34,6 +35,11 @@ body{
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
     background-color: #FF8C50;
+}
+
+
+.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{
+    margin-top: 16px;
 }
     
 
