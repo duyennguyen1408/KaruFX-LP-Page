@@ -1,16 +1,16 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./App.scss";
 import Header from "./components/Header/Header";
-import First_content from "./components/First_content/First_content";
-import Second_content from "./components/Second_content/Second_content";
+import Content_summary from "./components/Content_summary/Content_summary";
+import Main_content from "./components/Main_content/Main_content";
 import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
         <div className="App">
             <Header />
-            <First_content />
-            <Second_content />
+            <Content_summary />
+            <Main_content />
             <Footer />
         </div>
     );
